@@ -1,0 +1,159 @@
+/* Background setup */
+.bg-setup {
+  background-color: black;
+  background-image: url("/images/bg.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center 100px;
+  color: white;
+  font-family: "IBM Plex Sans", sans-serif;
+  min-height: 100vh;
+}
+
+.bg-setup-admin {
+  background-color: black;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center 100px;
+  color: white;
+  font-family: "IBM Plex Sans", sans-serif;
+  min-height: 100vh;
+}
+
+/* Responsive background adjustments */
+@media (max-width: 768px) {
+  .bg-setup {
+    background-position: center 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bg-setup {
+    background-position: center 50px;
+  }
+}
+
+/* Hero section glow effect */
+.earth-glow {
+  background: radial-gradient(circle at top, #1a237e, #000 70%);
+  min-height: 100vh;
+}
+
+/* Fade-in effect for heading/text */
+.fade {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.fade.show {
+  opacity: 1;
+}
+
+/* Popup menu animation (if you want a custom menu, not Bootstrap collapse) */
+.menu-popup {
+  transition: all 0.4s ease;
+  transform: scale(0.8);
+  opacity: 0;
+  pointer-events: none;
+}
+.menu-popup.active {
+  transform: scale(1);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Custom font for headings */
+.text-font {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+
+.navbar .nav-link:hover {
+  color: #0d6efd !important; /* Bootstrap's default primary blue */
+}
+
+/* Footer links and icons */
+footer a {
+  color: #6c757d; /* Bootstrap secondary gray */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover,
+footer a i:hover {
+  color: #0d6efd !important; /* Bootstrap primary blue */
+}
+
+
+
+
+
+/* login */
+
+.custom-input .form-control {
+  background-color: transparent;   
+  border: 1px solid #555;         
+  border-right: none;
+  color: #fff;                     
+  border-radius: 0px;    
+  box-shadow: none;
+}
+
+.custom-input .form-control::placeholder {
+  color: #aaa;                  
+}
+
+.custom-input .input-group-text {
+  background-color: transparent;   
+  border: 1px solid #555;
+  border-left: none;               
+  color: #3498db;                
+  border-radius: 0px;    
+}
+
+
+ .toggle-btn {
+  background: transparent;
+  border: 1px solid #555;
+  border-left: none;
+  color: #3498db;
+  border-radius: 0px;
+}
+
+ .toggle-btn:hover {
+  background: transparent;
+  color: #3498db;
+  border: 1px solid #555;
+  border-left: none;
+ }
+
+ .boarder-radius {
+  border-radius: 0px;
+ }
+
+ .text-size {
+  font-size: 14px;
+ }
+
+ .form-border {
+  border: 1px solid #555 !important; 
+ }
+
+ .custom-input .form-select {
+  background-color: transparent;   
+  border: 1px solid #555;             
+  border-radius: 0px;    
+}
+
+ .option-set {
+  background-color: transparent;   
+  border: 1px solid #555;             
+  border-radius: 0px;    
+  color: #fff;
+}
+
+ .option-set:focus {
+  background-color: transparent;   
+  border: 1px solid #0400ff;             
+  border-radius: 0px;    
+  color: #fff;
+}
