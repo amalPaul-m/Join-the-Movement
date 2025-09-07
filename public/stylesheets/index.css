@@ -157,3 +157,8 @@ footer a i:hover {
   border-radius: 0px;    
   color: #fff;
 }
+
+
+.modal-header {
+  border-bottom: none !important;
+}
