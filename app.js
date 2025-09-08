@@ -1,3 +1,4 @@
+  require('dotenv').config();
   const createError = require('http-errors');
   const express = require('express');
   const session = require('express-session');
@@ -11,7 +12,6 @@
   const moment = require('moment');
   const connectToDB = require('./configuration/db');
   connectToDB();
-  require('dotenv').config();
   require('./auth/google'); 
 
 
