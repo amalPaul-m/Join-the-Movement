@@ -9,7 +9,6 @@ const postVerifyOtp = async (req, res, next) => {
     const otp = req.body.otp;
     if (otp === req.session.otp) {
       const userData = new usersSchema(req.session.userData);
-      console.log(userData)
 
       const email = userData.email;
       const name = userData.name;

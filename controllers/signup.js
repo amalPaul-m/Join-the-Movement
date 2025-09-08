@@ -18,8 +18,8 @@ const postUserSignup = async (req, res, next) => {
 
       const user = await usersSchema.findOne({ email });
       if (user) {
-        res.render('signup',
-          { content: 'This Email is already exist, try another' });
+        return res.render('signup',
+          { content: 'This email is already registered, try another' });
 
       } else {
         const hashedPassword = await bcrypt.hash(password, 10); // Hash the password
@@ -36,7 +36,6 @@ const postUserSignup = async (req, res, next) => {
         //OTP generation and sending logic can be added here
 
         const otp = generateOtp();
-        console.log(otp)
         const emailSend = await sendVerificationEmail(email, otp);
 
         if (!emailSend) {
@@ -50,8 +49,6 @@ const postUserSignup = async (req, res, next) => {
             alert: 'mt-5'
           }
         )
-
-        console.log('OTP sent to:', email, 'OTP:', otp);
 
       }
     
