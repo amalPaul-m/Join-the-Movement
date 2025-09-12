@@ -162,3 +162,11 @@ footer a i:hover {
 .modal-header {
   border-bottom: none !important;
 }
+
+.backdrop-blur {
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px); 
+      background-color: rgba(0, 0, 0, 0.1); 
+      border-radius: 15px; 
+      padding: 2rem;
+    }
