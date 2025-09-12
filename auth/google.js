@@ -33,12 +33,12 @@ passport.use(new GoogleStrategy({
           const name = newUser.name;
           const checkUser = await usersSchema.findOne({email:email})
           
-          // if(!checkUser) {
-          //   const emailSend = await sendWelcomeEmail(email, name);
-          //   if (!emailSend) {
-          //     return res.json("email-error");
-          //   }
-          // }
+          if(!checkUser) {
+            const emailSend = await sendWelcomeEmail(email, name);
+            if (!emailSend) {
+              return res.json("email-error");
+            }
+          }
 
           const result = await newUser.save();
           // user = { ...newUser, _id: result.insertedId };
