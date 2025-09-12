@@ -27,6 +27,7 @@
   const aboutRouter = require('./routes/about');
   const adminRouter = require('./routes/admin');
   const dashboardRouter = require('./routes/dashboard');
+  const aboutLoginRouter = require('./routes/aboutLogin');
 
   const app = express();
 
@@ -105,6 +106,7 @@
   app.use('/about', aboutRouter);
   app.use('/admin', adminRouter);
   app.use('/dashboard', dashboardRouter);
+  app.use('/aboutLogin', aboutLoginRouter);
 
   // catch 404 and forward to error handler
   app.use(function(req, res, next) {
