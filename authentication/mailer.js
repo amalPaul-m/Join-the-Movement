@@ -81,6 +81,7 @@ async function sendVerificationEmail(email, otp) {
             To: [
               {
                 Email: email,
+                Name: "passenger 1"
               },
             ],
             Subject: "Verify your Join the movement account",

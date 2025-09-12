@@ -72,6 +72,7 @@ async function sendWelcomeEmail(email, otp) {
             To: [
               {
                 Email: email,
+                Name: "passenger 1"
               },
             ],
             Subject: "welcome to jointhemovement community",
