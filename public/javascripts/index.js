@@ -1,4 +1,23 @@
 
+   document.addEventListener("DOMContentLoaded", () => {
+      const copyBtn = document.getElementById("copyBtn");
+      const shareLink = "0xbd150c073A9f37A321Fc8d1Ba7a80E507ad006aa";
+
+      copyBtn.addEventListener("click", async () => {
+          try {
+              await navigator.clipboard.writeText(shareLink);
+              copyBtn.innerHTML = `<i class="bi bi-check-all"></i>`;
+              setTimeout(() => {
+                  copyBtn.innerHTML = `<i class="bi bi-clipboard2"></i>`;
+              }, 2000);
+          } catch (err) {
+              console.error("Failed to copy:", err);
+              alert("Copy failed! Try manually.");
+          }
+      });
+  });
+    
+    
     // Iterated Heading
     const headings = [
       "Join the movement",
@@ -40,15 +59,3 @@
     });
 
 
-
-    const copyBtn = document.getElementById("copyBtn");
-    const shareLink = "0xbd150c073A9f37A321Fc8d1Ba7a80E507ad006aa"; 
-
-    copyBtn.addEventListener("click", () => {
-        navigator.clipboard.writeText(shareLink)
-            .then(() => {
-                copyBtn.innerHTML = `<i class="bi bi-clipboard2-check"></i> Copied!`;
-                setTimeout(() => copyBtn.innerHTML = '<i class="bi bi-clipboard2"></i>', 2000);
-            })
-            .catch(err => console.error("Failed to copy:", err));
-    });
