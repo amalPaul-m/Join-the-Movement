@@ -107,46 +107,97 @@ input[type=number]::-webkit-outer-spin-button {
 
     /* swal style - success */
 
-    .swal-popup {
-      background-color: rgb(26, 26, 26); /* light green */
-      border-radius: 10px;
-      margin-top: -35%;
-      font-size: 14px;
-      width:25%;
-      color: aliceblue;
-      border: solid 1px rgb(0, 0, 0);
-      align-items: center;
-      justify-content: center;
-    }
+/* Base popup style */
+.swal-popup {
+  position: fixed;           /* fixed so it stays in viewport */
+  top: 10%;                  /* distance from top */
+  left: 50%;                 /* center horizontally */
+  transform: translateX(-50%) !important; /* perfect horizontal centering */
+  background-color: rgb(26, 26, 26);
+  border-radius: 10px;
+  font-size: 14px;
+  width: 25%;                /* original desktop width */
+  max-width: 400px;          /* prevent too wide on large screens */
+  color: aliceblue;
+  border: solid 1px rgb(0, 0, 0);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  z-index: 9999;             /* stay on top of other elements */
 
+  /* Disable default SweetAlert animations that cause sliding */
+  animation: none !important;
+  transform-origin: center top; /* ensures scaling/animation starts from top */
+}
+
+/* Title styles */
 .swal-title {
-  color: rgb(0, 255, 0); /* dark green */
-  font-weight: semi-bold;
+  color: rgb(0, 255, 0);
+  font-weight: 600;
   font-size: 16px;
-  padding: auto;
+  text-align: center;
   background-color: transparent;
 }
 
 .swal-title-failure {
-  color: #ff0000; /* dark green */
-  font-weight: semi-bold;
+  color: #ff0000;
+  font-weight: 600;
   font-size: 16px;
-  padding: auto;
+  text-align: center;
   background-color: transparent;
 }
 
+/* Icon */
 .swal-icon {
-  color: #00a008; /* icon color */
   display: none !important;
 }
 
+/* Button */
 .swal-button {
   background-color: #16a34a;
   color: white;
   padding: 10px 20px;
   border-radius: 8px;
   font-weight: bold;
+  font-size: 14px;
+  margin-top: 15px;
+  cursor: pointer;
 }
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .swal-popup {
+    width: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  .swal-popup {
+    width: 60%;
+  }
+}
+
+@media (max-width: 480px) {
+  .swal-popup {
+    width: 90%;
+  }
+
+  .swal-title, .swal-title-failure {
+    font-size: 14px;
+  }
+
+  .swal-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+
+
 
 .qswal2-container {
   backdrop-filter: blur(5px) !important;
