@@ -27,7 +27,7 @@ const postVerifyOtp = async (req, res, next) => {
       return res.json({ success: true, redirectUrl: '/userlogin' });
     } else {
 
-      return res.json({ success: false, message: 'Invalid OTP' });
+      return res.json({ success: false, message: 'Sorry Invalid OTP, Please try again' });
     }
   } catch (error) {
     console.log(error);

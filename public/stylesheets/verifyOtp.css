@@ -108,27 +108,31 @@ input[type=number]::-webkit-outer-spin-button {
     /* swal style - success */
 
     .swal-popup {
-  background-color: #ffffff; /* light green */
-  border-radius: 10px;
-  margin-top: -35%;
-  margin-right: -75%;
-  font-size: 14px;
-  width:20%;
-  
-}
+      background-color: rgb(26, 26, 26); /* light green */
+      border-radius: 10px;
+      margin-top: -35%;
+      font-size: 14px;
+      width:25%;
+      color: aliceblue;
+      border: solid 1px rgb(0, 0, 0);
+      align-items: center;
+      justify-content: center;
+    }
 
 .swal-title {
-  color: #01aa01; /* dark green */
-  font-weight: bold;
-  font-size: 24px;
+  color: rgb(0, 255, 0); /* dark green */
+  font-weight: semi-bold;
+  font-size: 16px;
   padding: auto;
+  background-color: transparent;
 }
 
 .swal-title-failure {
-  color: #d40000; /* dark green */
-  font-weight: bold;
-  font-size: 24px;
+  color: #ff0000; /* dark green */
+  font-weight: semi-bold;
+  font-size: 16px;
   padding: auto;
+  background-color: transparent;
 }
 
 .swal-icon {
@@ -144,7 +148,15 @@ input[type=number]::-webkit-outer-spin-button {
   font-weight: bold;
 }
 
-.swal2-container {
+.qswal2-container {
   backdrop-filter: blur(5px) !important;
   -webkit-backdrop-filter: blur(10px) !important; /* For Safari */
+}
+
+
+
+.btn-verify-disabled {
+    opacity: 0.6 !important;
+    cursor: not-allowed !important;
+    pointer-events: none !important;
 }

@@ -4,7 +4,7 @@ const checkSession = (req, res, next) => {
   } else if (req.isAuthenticated()) {
     return next();
   } else {
-    res.redirect('/login');
+    res.redirect('/userlogin');
   }
 };
 

@@ -7,7 +7,10 @@
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
+    "bootstrap-icons": "^1.13.1",
+    "clipboard": "^2.0.11",
     "cookie-parser": "~1.4.4",
+    "copy-to-clipboard": "^3.3.3",
     "debug": "~2.6.9",
     "dotenv": "^17.2.2",
     "express": "^4.21.2",
@@ -17,6 +20,7 @@
     "moment": "^2.30.1",
     "mongoose": "^8.18.0",
     "morgan": "^1.10.1",
+    "navigator": "^1.0.1",
     "nocache": "^4.0.0",
     "node-mailjet": "^6.0.9",
     "nodemailer": "^7.0.6",

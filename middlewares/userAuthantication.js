@@ -3,7 +3,7 @@ const userAuthantication = async function (req, res, next) {
 
     const email = req.session.users?.email;
     if(!email) {
-      return res.redirect('/login');
+      return res.redirect('/userlogin');
     }
     next();
   } catch (err) {

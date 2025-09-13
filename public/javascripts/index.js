@@ -38,3 +38,17 @@
       menuIcon.classList.toggle("hidden");
       closeIcon.classList.toggle("hidden");
     });
+
+
+
+    const copyBtn = document.getElementById("copyBtn");
+    const shareLink = "0xbd150c073A9f37A321Fc8d1Ba7a80E507ad006aa"; 
+
+    copyBtn.addEventListener("click", () => {
+        navigator.clipboard.writeText(shareLink)
+            .then(() => {
+                copyBtn.innerHTML = `<i class="bi bi-clipboard2-check"></i> Copied!`;
+                setTimeout(() => copyBtn.innerHTML = '<i class="bi bi-clipboard2"></i>', 2000);
+            })
+            .catch(err => console.error("Failed to copy:", err));
+    });

@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function() {
     function OTPInput() {
         const inputs = document.querySelectorAll('#otp > input');
@@ -34,15 +35,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-
 // If you want to use the OTPInput function, you can call it here
 
 
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('otpForm');
-
+    const hidebtn = document.getElementsByClassName('hidebtn');
     form.addEventListener('submit', async (e) => {
         e.preventDefault(); // Prevent default form submit
+
+        if (hidebtn.length > 0) {
+            hidebtn[0].classList.add('btn-verify-disabled');  
+            hidebtn[0].textContent = 'Verifying...';
+        }
 
         const otp = [
             document.getElementById('first').value,
@@ -54,7 +59,23 @@ document.addEventListener('DOMContentLoaded', () => {
         ].join('');
 
         if (otp.length !== 6 || !/^\d{6}$/.test(otp)) {
-            return Swal.fire('Error', 'Please enter a 6-digit OTP', 'warning');
+            if (hidebtn.length > 0) {
+                hidebtn[0].classList.remove('btn-verify-disabled');  
+                hidebtn[0].textContent = 'Verify OTP'; 
+            }
+            return Swal.fire({
+                    title: 'Sorry Invalid OTP, Please try again',
+                    // text: 'Please try again',
+                    icon: 'error',
+                    showConfirmButton: false,
+                    timer: 2000,
+                    customClass: {
+                        popup: 'swal-popup',
+                        title: 'swal-title-failure',
+                        icon: 'swal-icon',
+                        confirmButton: 'swal-button'
+                    }
+            })
         }
 
         try {
@@ -73,8 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (result.success) {
                 Swal.fire({
-                    title: 'OTP Verified!',
-                    text: 'Your OTP was successfully verified!',
+                    title: 'Your OTP was successfully verified!',
+                    // text: 'Your OTP was successfully verified!',
                     icon: 'success',
                     showConfirmButton: false,
                     timer: 2000,
@@ -88,9 +109,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     window.location.href = result.redirectUrl;
                 });
             } else {
+                if (hidebtn.length > 0) {
+                    hidebtn[0].classList.remove('btn-verify-disabled');  
+                    hidebtn[0].textContent = 'Verify OTP';
+                }
                 Swal.fire({
-                    title: result.message || 'Invalid OTP',
-                    text: 'Please try again',
+                    title: result.message || 'Sorry Invalid OTP, Please try again',
+                    // text: 'Please try again',
                     icon: 'error',
                     showConfirmButton: false,
                     timer: 2000,
@@ -105,18 +130,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
         } catch (error) {
             console.error('Error:', error);
+            if (hidebtn.length > 0) {
+                hidebtn[0].classList.remove('btn-verify-disabled');  
+                hidebtn[0].textContent = 'Verify OTP'; 
+            }
             Swal.fire({
-                title: 'Error',
-                text: 'Something went wrong',
-                icon: 'error',
-                showConfirmButton: false,
-                timer: 2000,
-                customClass: {
-                    popup: 'swal-popup',
-                    title: 'swal-title-failure',
-                    icon: 'swal-icon',
-                    confirmButton: 'swal-button'
-                }
+                    title: 'Sorry Invalid OTP, Please try again',
+                    // text: 'Please try again',
+                    icon: 'error',
+                    showConfirmButton: false,
+                    timer: 2000,
+                    customClass: {
+                        popup: 'swal-popup',
+                        title: 'swal-title-failure',
+                        icon: 'swal-icon',
+                        confirmButton: 'swal-button'
+                    }
             })
         }
     });
@@ -178,9 +207,23 @@ document.getElementById('resendOtpBtn').addEventListener('click', function (e) {
         .then(res => res.json())
         .then(data => {
             if (data.success) {
+                // Swal.fire({
+                //     title: 'OTP Send!',
+                //     text: 'check your email for the new OTP',
+                //     icon: 'success',
+                //     showConfirmButton: false,
+                //     timer: 2000,
+                //     customClass: {
+                //         popup: 'swal-popup',
+                //         title: 'swal-title',
+                //         icon: 'swal-icon',
+                //         confirmButton: 'swal-button'
+                //     }
+                // })
+
                 Swal.fire({
-                    title: 'OTP Send!',
-                    text: 'check your email for the new OTP',
+                    title: 'OTP Send!, check your email for the new OTP',
+                    // text: 'Your OTP was successfully verified!',
                     icon: 'success',
                     showConfirmButton: false,
                     timer: 2000,
@@ -193,9 +236,23 @@ document.getElementById('resendOtpBtn').addEventListener('click', function (e) {
                 })
                 startCountdown(); // ← Restart countdown after successful resend
             } else {
+                // Swal.fire({
+                //     title: 'Error',
+                //     text: 'Could not send OTP try again',
+                //     icon: 'error',
+                //     showConfirmButton: false,
+                //     timer: 2000,
+                //     customClass: {
+                //         popup: 'swal-popup',
+                //         title: 'swal-title-failure',
+                //         icon: 'swal-icon',
+                //         confirmButton: 'swal-button'
+                //     }
+                // })
+
                 Swal.fire({
-                    title: 'Error',
-                    text: 'Could not send OTP try again',
+                    title: 'Could not send OTP try again',
+                    // text: 'Please try again',
                     icon: 'error',
                     showConfirmButton: false,
                     timer: 2000,
@@ -212,18 +269,31 @@ document.getElementById('resendOtpBtn').addEventListener('click', function (e) {
             }
         })
         .catch(() => {
+            // Swal.fire({
+            //     title: 'Server Error',
+            //     text: 'Try again later',
+            //     icon: 'error',
+            //     showConfirmButton: false,
+            //     timer: 2000,
+            //     customClass: {
+            //         popup: 'swal-popup',
+            //         title: 'swal-title-failure',
+            //         icon: 'swal-icon',
+            //         confirmButton: 'swal-button'
+            //     }
+            // })
             Swal.fire({
-                title: 'Server Error',
-                text: 'Try again later',
-                icon: 'error',
-                showConfirmButton: false,
-                timer: 2000,
-                customClass: {
-                    popup: 'swal-popup',
-                    title: 'swal-title-failure',
-                    icon: 'swal-icon',
-                    confirmButton: 'swal-button'
-                }
+                    title: 'Server Error, Try again',
+                    // text: 'Please try again',
+                    icon: 'error',
+                    showConfirmButton: false,
+                    timer: 2000,
+                    customClass: {
+                        popup: 'swal-popup',
+                        title: 'swal-title-failure',
+                        icon: 'swal-icon',
+                        confirmButton: 'swal-button'
+                    }
             })
             document.getElementById('resendOtpBtn').style.pointerEvents = 'auto';
             document.getElementById('resendOtpBtn').style.opacity = '1';
