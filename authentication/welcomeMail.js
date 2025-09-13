@@ -26,10 +26,13 @@ async function sendWelcomeEmail(email, name) {
     <div style="margin: 0 auto; padding: 30px; background-color: #ffffff; border-radius: 8px; font-family: Arial, sans-serif;">
       
       <p style="font-size: 16px; color: #333333;">
-        Hello <strong>${name}</strong>,
+        Hi <strong>${name}</strong>,
       </p><br>
       <p style="font-size: 16px; color: #333333;">
         We are excited to have you join our community with investment <Amount> eg: 1000 USDT BEP20
+      </p><br>
+      <p>style="font-size: 16px; color: #333333;">
+      We're committed to providing you with the insights and support you need to achieve your financial goals.
       </p><br>
       <p style="font-size: 14px; color: #777777;">
         Warm Regards,<br>The JTM Team.

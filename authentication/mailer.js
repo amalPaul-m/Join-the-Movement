@@ -20,7 +20,7 @@ async function sendVerificationEmail(email, otp) {
     const info = await transporter.sendMail({
       from: `"Join The Movement" <${process.env.EMAIL_USER}>`, 
       to: email, 
-      subject: 'Verify your Join the movement account', 
+      subject: 'No-Reply: Verify your Join the movement account', 
       text: `Your OTP for verification is: ${otp}`, 
       html: `
     <div style="max-width: 500px; margin: 0 auto; padding: 30px; background-color: #ffffff; border-radius: 8px; font-family: Arial, sans-serif;">
