@@ -20,6 +20,11 @@
   min-height: 100vh;
 }
 
+.tagline {
+  font-size: 14px; 
+  margin-top: -70px; 
+  margin-right: 410px; 
+}
 /* Responsive background adjustments */
 @media (max-width: 768px) {
   .bg-setup {
@@ -169,4 +174,24 @@ footer a i:hover {
       background-color: rgba(0, 0, 0, 0.1); 
       border-radius: 15px; 
       padding: 2rem;
+    }
+
+
+    .payment-card {
+      border-radius: 15px;
+    }
+    .qr-code {
+      width: 160px;
+      height: 160px;
+      object-fit: contain;
+    }
+    .alert-custom {
+      font-size: 0.9rem;
+    }
+    .address-box {
+      background-color: #f1f3f5;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      word-break: break-all;
     }

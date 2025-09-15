@@ -3,82 +3,107 @@
 {{/section}}
 
 <div class="d-flex flex-column bg-setup text-white">
-<div class="container mx-auto px-4">
-  
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-md navbar-dark bg-transparent px-4 py-3">
-    <div class="container-fluid">
-      <a class="navbar-brand fw-bold fs-5" href="#">
-        <img src="/images/Logo.png" alt="logo" width="50">
-      </a>
+  <div class="container mx-auto px-4">
 
-      <!-- Toggler -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-transparent px-4 py-3">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold fs-5" href="#">
+          <img src="/images/Logo.png" alt="logo" width="100">
+        </a>
+
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto  fw-light">
+            <li class="nav-item"><a class="nav-link active" href="/home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="/aboutLogin">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">News</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="d-flex flex-column align-items-center text-center mt-3 px-3">
+      <h2 class="fs-3 mb-5 pb-3 fw-light text-font">J O I N . T H E . M O V E M E N T</h2>
+
+      <h3 class="mt-1"><b>Benefits for Investment– Join The Movement - JTM</b></h3>
+
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary mt-3 mb-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Early Bird Investment
       </button>
 
-      <!-- Links -->
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto  fw-light">
-          <li class="nav-item"><a class="nav-link active" href="/home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="/aboutLogin">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">News</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-          <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+      <p class="text-start pt-4 text-justify">
+        <b>⁠Profit Sharing & Capital Withdrawal – </b><span class="fw-light">Profits will be shared after six (6)
+          months, and from that point onward, investors may withdraw their capital at any time. </span>
+        <br>
+        <b>⁠Post-Capital Return Privileges – </b><span class="fw-light">After the return of the initial capital,
+          investors will continue to enjoy all company privileges, including profit-sharing, affiliate income, and
+          trading support.</span>
+        <br>
+        <b>⁠Annual Fully Paid Trip – </b><span class="fw-light">Each initial investor will be entitled to one fully
+          sponsored annual trip for themselves and their family, organized and paid for by Join The Movement
+          (JTM).</span>
+        <br>
+        <b>⁠Exclusive Trading Education & Support – </b><span class="fw-light">Investors will receive access to a
+          special trading course, along with continuous professional support.</span>
+        <br>
+        <b>⁠Direct Access to JTM Management – </b><span class="fw-light">All initial investors will have priority and
+          direct communication access to JTM’s management team.</span>
+        <br>
+        <b>⁠Global Pool Participation – </b><span class="fw-light">Investors will be part of JTM’s global profit pool
+          and enjoy a lifelong share of benefits generated from worldwide business operations.</span>
+      </p>
 
-  <!-- Hero Section -->
-  <main class="d-flex flex-column align-items-center text-center mt-5 px-3">
-    <h2 class="fs-3 mb-5 pb-3 fw-light text-font">J O I N . T H E . M O V E M E N T</h2>
 
-  <h5 class="mt-4">Thanks for your Early Bird Investment <b>1000 USDT</b></h5>
-  <h3 class="mt-1"><b>Benefits for Investment– Join The Movement  - JTM</b></h3>
 
-    <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary mt-3 mb-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-    Be a early  bird investor
-  </button>
+      <!-- Modal -->
+      <div class="modal backdrop-blur" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content bg-tlight text-black pb-5 border border-0 border-primary">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5 ms-4" id="staticBackdropLabel"><b>Pay 1000 USDT - BEP20</b></h1>
+              <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body container-fluid">
+              {{!-- <img src="/images/qr.png" alt="" height="200" class="mb-3">
 
-  <p class="text-start pt-4 fw-light text-justify">   
-  1.⁠ ⁠Profit Sharing & Capital Withdrawal – Profits will be shared after six (6) months, and from that point onward, investors may withdraw their capital at any time. 
-  <br>
-  2.⁠ ⁠Post-Capital Return Privileges – After the return of the initial capital, investors will continue to enjoy all company privileges, including profit-sharing, affiliate income, and trading support.
-  <br>
-  3.⁠ ⁠Annual Fully Paid Trip – Each initial investor will be entitled to one fully sponsored annual trip for themselves and their family, organized and paid for by Join The Movement (JTM).
-  <br>
-  4.⁠ ⁠Exclusive Trading Education & Support – Investors will receive access to a special trading course, along with continuous professional support.
-  <br>
-  5.⁠ ⁠Direct Access to JTM Management – All initial investors will have priority and direct communication access to JTM’s management team.
-  <br>
-  6.⁠ ⁠Global Pool Participation – Investors will be part of JTM’s global profit pool and enjoy a lifelong share of benefits generated from worldwide business operations.</p>
-  
-  
+              <div class="fs-small mt-2">
+                <input type="text" id="wallet" class="py-1" value="0xbd150c073A9f37A321Fc8d1Ba7a80E507ad006aa" readonly>
+                <button class="btn btn-outline-primary ms-2 py-1 px-2" style="margin-top: -5px;" id="copyBtn">
+                  <i class="bi bi-clipboard2"></i>
+                </button>
+              </div> --}}
 
-<!-- Modal -->
-<div class="modal backdrop-blur" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content bg-transparent pb-5 border border-0 border-primary">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Scan QR</h1>
-        <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <img src="/images/qr.png" alt="" height="200">
+              <div class="row">
+                <div class="col col-lg-4 col-md-4 col-sm-12 text-center mt-3 mb-3">
+                  <img src="/images/qr.jpg" alt="" height="160" class="mb-3">
+                </div>
+                <div class="col col-lg-8 col-md-8 text-start col-sm-12 mt-4">
+                  <p class="mb-1"><span class="fw-light fs-small">Order Amount</span><br><strong>1000 USD</strong></p>
+                  <p class="mb-1"><span class="fw-light fs-small">Network</span><br><strong>BNB Smart Chain</strong></p>
+                  <p> 0x952fe9b0f33eca70d4f128c787769bfd70516
+                    <button class="border-0 bg-white ms-2 py-1 px-2" style="margin-top: -5px;" id="copyBtn">
+                      <i class="bi bi-clipboard2"></i>
+                    </button>
+                  </p>
+                </div>
+              </div>
 
-        <div class="fs-small mt-2">
-          <input type="text" id="wallet" value="0xbd150c073A9f37A321Fc8d1Ba7a80E507ad006aa" readonly>
-          <button class="btn btn-outline-primary ms-2" id="copyBtn">
-            <i class="bi bi-clipboard2"></i>
-          </button>
+            </div>
+          </div>
         </div>
-
       </div>
-    </div>
   </div>
-</div>
   </main>
 
   <!-- Footer -->
