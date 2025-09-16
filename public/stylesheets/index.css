@@ -196,4 +196,14 @@ footer a i:hover {
       word-break: break-all;
     }
 
-    
+
+/* about */
+
+  .about-text {
+    max-width: 900px;  
+    text-align: justify; 
+  }
+  .about-text p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }

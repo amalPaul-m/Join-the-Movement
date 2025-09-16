@@ -21,10 +21,10 @@
       <!-- Links -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto  fw-light">
-          <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
           {{!-- <li class="nav-item"><a class="nav-link" href="#">News</a></li> --}}
-          <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link active" href="/contact">Contact</a></li>
           <li class="nav-item"><a class="nav-link" href="/signup">Sign Up</a></li>
           <li class="nav-item"><a class="nav-link" href="/userlogin">Login</a></li>
         </ul>
@@ -32,16 +32,45 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <main class="d-flex flex-column  mt-3 px-3">
-    <h2 class="fs-3 mb-5 pb-3 fw-light text-font text-center">J O I N . T H E . M O V E M E N T <p><em class="text-end fw-italic fw-light tagline">own the future...</em></p></h2>
-     
-    <h1 id="iterated-heading" class="fs-3 text-primary fade pt-5 mt-2 fw-light align-items-center text-center"></h1>
-  </main>
+  <section class="contact-section container">
+    <div class="row">
+      
+      <!-- Left Column: Form -->
+      <div class="col-md-6">
+        <h3 class="mb-4">CONTACT US!</h3>
+
+        <form class="needs-validation" novalidate>
+          <input type="text" class="form-control" placeholder="Your Name" required>
+          <div class="invalid-feedback">Please enter your name.</div>
+
+          <input type="email" class="form-control" placeholder="Email" required>
+          <div class="invalid-feedback">Please enter a valid email.</div>
+
+          <textarea class="form-control" placeholder="Message" rows="5" required></textarea>
+          <div class="invalid-feedback">Please enter your message.</div>
+
+          <button type="submit" class="btn btn-primary full-width-button btn-send">SEND</button>
+        </form>
+      </div>
+
+      <div class="col col-md-1 "></div>
+      <!-- Right Column: Contact Info -->
+      <div class="col-md-5 contact-info mt-5 pt-5">
+        <p><i class="bi bi-geo-alt-fill text-primary"></i> Rue du Vert Galant 282
+        Liège, Belgium 4218
+        </p>
+        <p class="pt-3"><i class="bi bi-telephone-fill text-primary"></i> +32 496 33 93 71‬
+        </p>
+        <p class="pt-3"><i class="bi bi-envelope-fill text-primary"></i> support@jointhemovement.io</p>
+
+      </div>
+
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="opacity-50 text-secondary text-center mt-5 py-5">
-    <div class="d-flex justify-content-center gap-3 mb-3 mt-3">
+    <div class="d-flex justify-content-center gap-3 mb-3">
       <a href="#"><i class="fab fa-facebook fa-lg text-secondary"></i></a>
       <a href="#"><i class="fab fa-instagram fa-lg text-secondary"></i></a>
       <a href="#"><i class="fab fa-youtube fa-lg text-secondary"></i></a>
@@ -57,7 +86,7 @@
       <div class="text-secondary small">
         All copyright JTM © 2025
       </div>
-
+      
     </div>
   </footer>
 </div>

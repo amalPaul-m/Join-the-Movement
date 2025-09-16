@@ -22,8 +22,8 @@
         <ul class="navbar-nav ms-auto  fw-light">
           <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
           <li class="nav-item"><a class="nav-link active" href="/about">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">News</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          {{!-- <li class="nav-item"><a class="nav-link" href="#">News</a></li> --}}
+          <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
           <li class="nav-item"><a class="nav-link" href="/signup">Sign Up</a></li>
           <li class="nav-item"><a class="nav-link" href="/userlogin">Login</a></li>
         </ul>
@@ -34,7 +34,19 @@
   <!-- Hero Section -->
   <main class="d-flex flex-column mt-2 px-3">
     <h2 class="text-center mb-5"><b>About Us</b></h2>
-    <p class="mt-4"><span class="fs-5 fw-bold">JTM – Join The Movement, Own The Future : </span>
+    <div class="about-text mx-auto">
+    <p class="mt-4">Join The Moment (JTM) is a forward-thinking technology and education company founded in Europe by visionary entrepreneur Thomas Carlos, seven years ago.
+
+    From its inception, JTM was designed to bridge tradition with innovation — merging the trust and stability of Web2 with the limitless opportunities of Web3 and Artificial Intelligence.
+
+    At JTM, we are not just creating a company — we are building a global movement. Our ecosystem empowers individuals to learn, trade, invest, and co-own businesses that define the future of wealth creation.
+
+    By blending financial education, blockchain innovation, and community ownership, JTM transforms ordinary members into extraordinary entrepreneurs.
+    People proudly declare:
+    “I am not just a customer, I am a co-owner.</p>
+    </div>
+    
+    {{!-- <p class="mt-4"><span class="fs-5 fw-bold">JTM – Join The Movement, Own The Future : </span>
       JTM was founded with a vision to empower people with 
       financial knowledge, real ownership, and global opportunities. 
       We believe that everyone should not just be a customer — but a co-owner, 
@@ -89,7 +101,7 @@ With JTM, you own a piece of the future.</p>
 
 <p><span class="fs-5 fw-bold">Our Mission : </span>To democratize financial education, create wealth-sharing ecosystems, and give people real ownership in innovative global businesses.</p>
 
-<p><span class="fs-5 fw-bold">Our Vision : </span>A world where everyone has equal access to financial growth, cutting-edge technology, and community-driven profits.</p></p>
+<p><span class="fs-5 fw-bold">Our Vision : </span>A world where everyone has equal access to financial growth, cutting-edge technology, and community-driven profits.</p></p> --}}
   </main>
 
   <!-- Footer -->
@@ -109,10 +121,6 @@ With JTM, you own a piece of the future.</p>
 
       <div class="text-secondary small">
         All copyright JTM © 2025
-      </div>
-
-      <div class="text-secondary small">
-        Avenue Louise 54, Brussels, Belgium
       </div>
 
     </div>
