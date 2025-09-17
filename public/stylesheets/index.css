@@ -21,8 +21,10 @@
 }
 
 .tagline {
+  position: absolute;
   font-size: 14px; 
-  padding-left: 130px;
+  padding-left: 25px;
+  margin-top: 0px;
   
 }
 /* Responsive background adjustments */

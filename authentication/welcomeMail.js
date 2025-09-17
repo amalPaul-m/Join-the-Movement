@@ -29,10 +29,16 @@ async function sendWelcomeEmail(email, name) {
         Hi <strong>${name}</strong>,
       </p><br>
       <p style="font-size: 16px; color: #333333;">
-        We are excited to have you join our community with investment <Amount> eg: 1000 USDT BEP20
+        Please verify your email !
       </p><br>
-      <p>style="font-size: 16px; color: #333333;">
-      We're committed to providing you with the insights and support you need to achieve your financial goals.
+      <p style="font-size: 16px; color: #333333;">
+        To activate your account and ensure the security of your information, please verify your email address by clicking the link below. This essential step unlocks our full suite of tools and expert resources, all designed to help you maximize your profit potential.
+      </p><br>
+      <p style="font-size: 16px; color: #333333;">
+        We're committed to providing you with the insights and support you need to achieve your financial goals.
+      </p><br>
+      <p style="font-size: 16px; color: #333333;">
+        If you have any questions about your purchase or need assistance, please contact our support team at <a href='support@jointhemovement.io'>support@jointhemovement.io</a>
       </p><br>
       <p style="font-size: 14px; color: #777777;">
         Warm Regards,<br>The JTM Team.
@@ -43,7 +49,7 @@ async function sendWelcomeEmail(email, name) {
     </div>
   `
     });
-    return info.accepted.length > 0; // Return true if email was sent successfully
+    return info.accepted.length > 0; 
 
   } catch (error) {
     console.error('Error sending verification email:', error);
