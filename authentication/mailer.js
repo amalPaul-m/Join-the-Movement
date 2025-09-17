@@ -27,18 +27,18 @@ async function sendVerificationEmail(email, otp) {
       
       <h3 style="text-align: center; color: #000000ff;">OTP Verification</h3>
       <p style="text-align: center; font-size: 16px; color: #333333;">
-        Hello <strong>Customer!</strong>,
+        Hi <strong>Co-owner!</strong>,
       </p>
       <p style="text-align: center; font-size: 16px; color: #333333;">
         Your OTP for verification is:
       </p>
       <div style="text-align: center; margin: 20px 0;">
-        <span style="display: inline-block; background-color: #c2c2c2ff; color: #ffffff; font-size: 24px; letter-spacing: 4px; padding: 12px 24px; border-radius: 8px;">
+        <span style="display: inline-block; background-color: #215cffff; color: #ffffff; font-size: 24px; letter-spacing: 4px; padding: 12px 24px; border-radius: 8px;">
           ${otp}
         </span>
       </div>
       <p style="text-align: center; font-size: 16px; color: #333333;">
-        This OTP is valid for the next <strong>5 minutes</strong>.
+        This OTP is valid for the next <strong>10 minutes</strong>.
       </p>
       <p style="text-align: center; font-size: 14px; color: #777777;">
         If you did not request this, please ignore this email.
